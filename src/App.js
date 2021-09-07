@@ -3,7 +3,6 @@ import "./App.css";
 import UserInfo from "./Component/UserInfo";
 import Login from "./Component/Login";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import SignUp from "./Component/SignUp";
 import { useMemo, useEffect } from "react";
 import cookies from "js-cookie";
 import { useHistory } from "react-router";
@@ -36,9 +35,7 @@ function App() {
             <Route path="/login">
               <Login></Login>
             </Route>
-            <Route path="/signup">
-              <SignUp></SignUp>
-            </Route>
+
           </Switch>
         </div>
       </BrowserRouter>

@@ -68,7 +68,7 @@ export default function Login() {
   useMemo(() => {
     if (cookies.get("token")) {
       history.push({
-        pathname: "/listform",
+        pathname: "/userlist",
       });
     }
   }, []);
@@ -159,11 +159,6 @@ export default function Login() {
               >
                 Sign In
               </Button>
-              <Grid item>
-                <Link href="/signup" variant="body2">
-                  {"Don't have an account? Sign Up"}
-                </Link>
-              </Grid>
             </div>
           </div>
           <Box mt={8}>
