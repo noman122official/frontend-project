@@ -1,6 +1,5 @@
 import logo from "./logo.svg";
 import "./App.css";
-import Todo from "./Component/Todo";
 import UserInfo from "./Component/UserInfo";
 import Login from "./Component/Login";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
@@ -30,10 +29,7 @@ function App() {
           <Switch>
             <Route exact path="/">
               <Login></Login>
-            </Route>
-            <Route path="/listform">
-              <Todo></Todo>
-            </Route>
+              </Route>
             <Route path="/userlist">
               <UserInfo></UserInfo>
             </Route>

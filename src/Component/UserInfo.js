@@ -19,6 +19,7 @@ const useStyles = makeStyles((theme) => ({
     "& > *": {
       margin: theme.spacing(1),
       width: "70vw",
+      backgroundColor: "#BEB8F5"
     },
   },
   table: {
@@ -29,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
     width: "70vw",
   },
   tableHead: {
-    // backgroundColor:'grey'
+    backgroundColor:'#BEB8F5'
   },
 }));
 const StyledTableCell = withStyles((theme) => ({
@@ -40,7 +41,6 @@ const StyledTableCell = withStyles((theme) => ({
   },
   body: {
     fontSize: 14,
-    //   width:'70vw'
   },
 }))(TableCell);
 
@@ -89,12 +89,12 @@ function UserInfo(props) {
     <>
       {errorMessage ? (
         <>
-          <Header val="Logout" secondButton={{'value' : 'Home' , 'path' : '/listform'}}></Header>
+          <Header val="Logout"></Header>
           <Alert severity="error">{errorMessage}</Alert>
         </>
       ) : (
         <div>
-          <Header val="Logout" secondButton={{'value' : 'Home' , 'path' : '/listform'}}></Header>
+          <Header val="Logout"></Header>
           <br></br>
           <TableContainer
             component={Paper}

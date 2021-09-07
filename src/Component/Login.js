@@ -16,6 +16,7 @@ import cookies from "js-cookie";
 import Header from "./Header";
 import { useHistory } from "react-router-dom";
 import config from "../config";
+import { Repeat } from "@material-ui/icons";
 function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
@@ -57,8 +58,8 @@ export default function Login() {
   const paperStyle = {
     padding: 30,
     margin: "10vh auto",
-    borderRadius: "10px",
-    backgroundColor: "#F2F7F7",
+    borderRadius: "50px",
+    backgroundColor: "#99C2C2",
   };
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
@@ -96,7 +97,7 @@ export default function Login() {
         cookies.set("token", data.data.token);
         cookies.set("fullname", data.data.name);
         history.push({
-          pathname: "/listform",
+          pathname: "/userlist",
         });
       })
       .catch((error) => {
@@ -105,8 +106,7 @@ export default function Login() {
   }
   return (
     <div
-      style={{ backgroundColor: "#DCDCDC", height: "100vh", marginTop: "0" }}
-    >
+    style={{ backgroundColor: "#DCDCDC", height: "100vh", marginTop: "0" }}>
       <Header></Header>
       <paper elevation={10}>
         <Container component="main" maxWidth="xs" style={paperStyle}>
@@ -172,5 +172,6 @@ export default function Login() {
         </Container>
       </paper>
     </div>
+
   );
 }

@@ -14,9 +14,6 @@ const useStyles = makeStyles((theme) =>
     root: {
       flexGrow: 1,
     },
-    menuButton: {
-      marginRight: theme.spacing(2),
-    },
     title: {
       flexGrow: 1,
       textAlign: "center",
@@ -42,33 +39,16 @@ export default function Header(props) {
     });
   }
 
-  function redirectToLocation() {
-    history.push({
-      pathname: props.secondButton.path,
-    });
-  }
-
   return (
     <div className={classes.root}>
       <AppBar position="static">
         <Toolbar>
-          <IconButton
-            edge="start"
-            className={classes.menuButton}
-            color="inherit"
-            aria-label="menu"
-          >
-            <MenuIcon />
-          </IconButton>
+      
           <Typography variant="h6" className={classes.title}>
-            {fullname?.toLowerCase()} Empire!
+            User List App
           </Typography>
 
-          {props.secondButton && (
-            <Button color="inherit" onClick={redirectToLocation}>
-              {props.secondButton.value}
-            </Button>
-          )}
+      
           <Button color="inherit" onClick={logout}>
             {props.val ? props.val : "Login"}
           </Button>
